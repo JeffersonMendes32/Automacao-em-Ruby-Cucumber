@@ -12,7 +12,6 @@ CONFIG = YAML.load_file(File.dirname(__FILE__) + "/enviroments/development.yml")
 #Configurações das dependências
 Capybara.configure do |config| #Capybara aqui é uma classe,por isso do "C", .configure é um metodo que tem dentro dessa classe 
     #propriedades padrão dentro do config
-    config.default_driver = :selenium_chrome
     case ENV['BROWSER'] #configuração para validar o navegador de execução do teste
 
      when 'chrome_headless'
