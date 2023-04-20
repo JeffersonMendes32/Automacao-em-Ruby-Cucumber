@@ -1,8 +1,16 @@
 name: My Automation(Qa.Coders)
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Executa todos os dias às 00:00
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  #executar Manualmente na aba Action
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
