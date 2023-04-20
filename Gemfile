@@ -24,5 +24,4 @@ gem 'site_prism'
 #toda hora o codigo.
 gem 'pry'
 
-gem 'cucumber-reports', '~> 0.0.1'
 
