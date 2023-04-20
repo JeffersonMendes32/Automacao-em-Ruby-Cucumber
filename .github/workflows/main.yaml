@@ -1,0 +1,26 @@
+name: My Automation(Qa.Coders)
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Executa todos os dias às 00:00
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.2p20 #altere para a versão do ruby que está usando
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+          bundle exec cucumber -p ci
+        env:
+          CI: true
