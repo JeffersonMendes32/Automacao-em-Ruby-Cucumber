@@ -1,0 +1,6 @@
+# nao quero ele versione nada que seja ".log"
+*.log
+#Para que ele não versione a pasta  
+Reports 
+#tb não quero ele versione o arquivo de pendencias, as pessoas vão ser obrigadas a ter as versões att
+gemfile.lock

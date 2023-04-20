@@ -1,0 +1,14 @@
+default: -p pretty --publish-quiet -p html -p development -p chrome
+ci: -p pretty --publish-quiet -p html -p development -p chrome_headless #linha para execução no Ci do github
+
+pretty: --format pretty
+development: ENVIROMENT=development
+production: ENVIROMENT=production
+
+chrome: BROWSER=chrome
+firefox: BROWSER=firefox
+edge: BROWSER=edge
+chrome_headless: BROWSER=chrome_headless #Para ele executar a automação com o navegador fechado/exemplo se eu tiver executando a automação no pipeline ngm vai precisar ver
+headless: BROWSER=headless
+
+html: --format html --out=reports/report.html #Aqui serve pra ele criar um report la na pasta reports, ele cria la pq os arquivos estao no mesmo nivel senao ele criaria em outro lugar
