@@ -34,12 +34,12 @@ jobs:
 
        # Excecução sos testes no navegador web sem interface chrome_headless
       - name: Step 3 Execute test 
-      run:
+        run:
           bundle exec cucumber -p ci          
 
      # Grava o relatório do resultado do teste
       - name: Step 4 Archive production artifacts 
-      uses: actions/upload-artifact@v3
-      with: 
-        name: reports
-        path: ./reports/report.html    
+        uses: actions/upload-artifact@v3
+        with: 
+          name: reports
+          path: ./reports/report.html    
